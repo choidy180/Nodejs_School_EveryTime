@@ -1,0 +1,40 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap"
+    rel="stylesheet">
+<div class="board_main_right" style="border: 1px solid #585858; text-align: left;">
+<div class="edit_box">
+    <div class="edit_title_text" style="font-size: 30px;">장터 게시글 작성</div>
+    <div class="edit_line"></div>
+    <div class="edit_title_text" style="color: #f00; margin-bottom: 10px;">* 업로더 유의사항 : 정치, 성혐오, 광고, 분쟁성, 어그로 게시물 금지
+    </div>
+    <form method="POST" action="/board/upload_market" enctype="multipart/form-data" style="margin-bottom: 20px;">
+        <div class="edit_select_box">
+            <select name="type" class="edit_select"
+                style="font-size: 18px; font-family: 'Poor Story', cursive; font-weight: 700; border: 1px solid #585858; padding-left: 10px;">
+                <option value="sale">팝니다</option>
+                <option value="purchase">삽니다</option>
+            </select>
+            <select name="sort" class="edit_select"
+                style="font-size: 18px; font-family: 'Poor Story', cursive; font-weight: 700; border: 1px solid #585858; padding-left: 10px;">
+                <%
+                for(var i=0; i<rows.length; i++)
+                {
+                var data = rows[i];
+                %>
+                <option style="width: 50px;" value="<%=data.sort%>"><%=data.sort%></option>
+                <%}%>
+            </select>
+        </div>
+        <input type="text" class="input_board_title_box" name="price" placeholder="가격을 입력해 주세요">
+        <input type="text" class="input_board_title_box" name="product" placeholder="제목을 입력해 주세요">
+        <div class="input_board_img_box">
+            <label for="프로필" style="font-size: 18px; font-family: 'Poor Story', cursive; font-weight: 700; padding-bottom: 10px;">업로드 이미지 &nbsp;&nbsp;&nbsp; </label>
+            <input type="file" name="userfile" style="margin-top: 7px;">
+        </div>
+        <textarea name="content" class="input_board_content" cols="30" rows="10"></textarea>
+        <br>
+        <div class="upload_board_box">
+        <button class="board_create_button" style="font-size: 20px;">게시글 작성</button>
+        </form>
+        </div>
+    </div>
+</div>

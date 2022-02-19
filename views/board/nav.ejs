@@ -1,0 +1,25 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap" rel="stylesheet">
+<div class="nav_area">
+    <div class="nav_left_box">
+        <span class="main_head_text" style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/main">메인 홈페이지</a></span>
+    </div>
+    <div class="nav_center_box">
+        <span class="main_head_text" style="margin-left:35px; margin-right: 15px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/">개인홈페이지</a></span>
+        <% if(sess.user) {%>
+        <span class="main_head_text" style="margin-left:35px; margin-right: 15px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/board/lecture_evaluation_list">강의평가</a></span>
+        <%}%>
+        <span class="main_head_text" style="margin-left:35px; margin-right: 15px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/board/market_type=all">장터게시판</a></span>
+        <% if(sess.user) {%>
+        <span class="main_head_text" style="margin-left:35px; margin-right: 15px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="<%=school[0].url%>">학교홈페이지</a></span>
+        <%}%>
+    </div>
+    <div class="nav_center_right">
+        <% if(sess.user) {%>
+        <span class="main_head_text" style="margin-right: 20px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/board/mypage/my">마이페이지</a></span>
+        <span class="main_head_text" style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/logout">로그아웃</a></span>
+        <% } else {%>
+            <span class="main_head_text" style="margin-left:35px; margin-right: 20px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/join">회원가입</a></span>
+            <span class="main_head_text" style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"><a href="http://localhost:3000/login">로그인</a></span>
+        <%}%>
+    </div>
+</div>

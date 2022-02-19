@@ -1,0 +1,35 @@
+<div class="body_area">
+    <div class="body_box">
+        <div class="join_area">
+            <div class="join_title">
+                <span class="join_title_text" style="font-family: 'Poor Story', cursive; font-weight: 700; padding-bottom: -50px; font-size: 50px;">회 원 가 입</span>
+            </div>
+            <div class="join_input_area">
+                <form method="POST" action="/users/join" enctype="multipart/form-data">
+                    <input type="text" class="join_input_box" name="school" placeholder="학교">
+                    <input type="text" class="join_input_box" name="admission" placeholder="입학년도">
+                    <input type="text" class="join_input_box" name="name" placeholder="이름">
+                    <div class="join_input_box">
+                        <label for="프로필">프로필 이미지 &nbsp;&nbsp;&nbsp; </label>
+                        <input type="file" name="userfile" id="" style="margin-top: 7px;">
+                    </div>
+                    <input type="text" class="join_input_box" name="id" placeholder="아이디">
+                    <input type="text" class="join_input_box" name="passwd" placeholder="비밀번호">
+                    <select name="sex" class="join_input_box" style="width: 100%; height: 44px;">
+                        <option value="남자">남자</option>
+                        <option value="여자">여자</option>
+                    </select>
+                    <input type="text" class="join_input_box" name="email" placeholder="이메일">
+                    <div class="join_input_birth_area">
+                        <input type="text" class="join_input_birth" name="year" style="margin-left: 0px;"
+                            placeholder="년(4자)">
+                        <input type="text" class="join_input_birth" name="month" placeholder="월">
+                        <input type="text" class="join_input_birth_end" name="day" placeholder="일">
+                    </div>
+                    <input type="text" class="join_input_box" name="tel" placeholder="휴대폰 번호">
+                    <button class="join_button" style="font-size: 30px; font-family: 'Poor Story', cursive; font-weight: 700;">가 입 하 기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap"rel="stylesheet">
+<div class="board_main_right" style="border: 1px solid #585858; text-align: left; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 50px;">
+        <span style="font-size: 25px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px; margin-right: 580px;"><%=sess.user.school%> 강의평가 입니다.</span> 
+        <a href="http://localhost:3000/board/lecture_evaluation_upload" class="edit_botton"><button class="board_create_button">게시글 작성</button></a>
+    </div>
+    <% if (rows[0] != undefined) {%>
+        <% for (var i = 0; i < rows.length; i++){%>
+            <div style="width: 98%; height: 60px; border: 1px solid black; padding: 10px; margin-bottom: 5px;">
+                <p style="font-size: 25px; font-family: 'Poor Story', cursive; font-weight: 700; margin-top: 0; margin-bottom: 5px;">[<%= rows[i].lecture%>] / 교수-<%= rows[i].professor%> / <%= rows[i].score%></p>
+                <p style="margin-top: 0; margin-bottom: -5px;"><%= rows[i].opinion%></p>
+            </div>
+        <%}%>
+    <%}%>
+</div>

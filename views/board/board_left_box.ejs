@@ -1,0 +1,193 @@
+<div class="board_main_userinfo">
+    <div class="board_main_profile_img_box">
+        <div class="board_main_profile_img">
+            <% if(sess.user) {%>
+            <img src="http://localhost:3000/user/<%=sess.user.img%>" alt="" style="width: 160px; height: 160px;">
+            <% } else {%>
+            <img src="http://localhost:3000/user/not_login_profile_img.png%>" alt="" style="width: 100%; height: 100%;">
+            <%}%>
+        </div>
+    </div>
+    <div class="board_main_profile_text_box">
+        <% if(sess.user) {%>
+            <p
+                style="margin: 0px; margin-bottom: 5px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;">
+                <%=sess.user.school%></p>
+            <p style="margin: 0px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;">
+                <%=sess.user.name%></p>
+            <a href="http://localhost:3000/board_edit" class="edit_botton"><button style="margin-top: 10px;"
+                    class="board_create_button">게시글 작성</button></a>
+            <% } else {%>
+            <p style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-top: 0px;">로그인이
+                필요합니다</p>
+            <%}%>
+    </div>
+</div>
+<% if(sess.user) {%>
+            <div class="create_post">
+                <a href="http://localhost:3000/board/edit_content/<%=sess.user.id%>"><button class="board_search_button" style="width: 100%; height: 40px; font-size: 20px; ">내가 작성한 글</button></a>
+                <button class="board_search_button" style="width: 100%; height: 40px; font-size: 20px; border-bottom: 1px solid #585858; margin-bottom: 10px; ">댓글 단 글</button>
+            </div>
+            <%}%>
+<div class="main_board_list_box" >
+    <div class="main_board_list" style="margin-bottom: 20px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/n.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/up_to_date">최신글 보기</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/star.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/notice">공지사항</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/free">자유게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/secret">비밀게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/alumnus">졸업생게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/recruit">새내기게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/market">장터게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/pr">홍보게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/club">동아리학회</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/info">정보게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list"  style="margin-bottom: 30px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text" >
+            <a href="http://localhost:3000/board/list/employment">취업-진로</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/idol">아이돌 / 연예인</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/fashion">패션게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/pet">PET 게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list" style="margin-bottom: 30px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/soccer">축구게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/LOL">LOL 게시판</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/maple">Dㅔ이플SU토리</a>
+        </div>
+    </div>
+    <div class="main_board_list "  style="margin-bottom: 30px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/ACNH">모여봐요 동물의 숲</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/suggestion">건의사항</a>
+        </div>
+    </div>
+    <div class="main_board_list ">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="main_board_list_text">
+            <a href="http://localhost:3000/board/list/report">신고게시판</a>
+        </div>
+    </div>
+</div>

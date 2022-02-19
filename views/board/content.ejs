@@ -1,0 +1,88 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap"
+    rel="stylesheet">
+<div class="board_main_right" style="border: 1px solid black; padding: 20px; width: 950px; border-radius: 3px;">
+    <div
+        style="width: 100%; height: 45px; border-bottom: 1px solid #efefef; display: flex; flex-direction: row; justify-content: left; align-items: center; ">
+        <button style="width: 60px; height: 30px; font-size: 16px; font-family: 'Noto Sans KR', sans-serif;"
+            class="content_back" onclick="history.go(-1)">목록</button>
+    </div>
+    <div style="width: 100%; height: 25px;">
+        <span
+            style="font-size: 16px; font-family: 'Noto Sans KR', sans-serif; display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 10px;"><%=row[0].sort%>.....</span>
+    </div>
+    <div style="width: 100%; height: 27px;">
+        <span
+            style="font-size: 20px; font-family: 'Noto Sans KR', sans-serif; display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 5px;"><%=row[0].title%></span>
+    </div>
+    <div
+        style="width: 100%; height: 30px; display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 5px; margin-bottom: 30px; ">
+        <img src="../user/<%=row2[0].img%>" alt="" style="width: 30px; height: 100%;"><span
+            name="name">&nbsp;&nbsp;<%=row[0].user_name%>&nbsp;/&nbsp;</span><span>
+            <%=row[0].edit_date%></span>
+    </div>
+    <div style="width: auto; height: auto; margin-bottom: 30px; overflow: hidden;">
+        <% if(row[0].img != null) {%>
+        <img src="../user/<%=row[0].img%>" alt="" style="width: 100%; height: auto;">
+        <%}%>
+    </div>
+    <div style="width: 100%; height: auto; margin-bottom: 30px; display: flex; flex-direction: row; justify-content: left; align-items: center;">
+        <span><%=row[0].content%></span>
+    </div>
+    <% if (sess.user != undefined) { %>
+    <% if (sess.user.id == row[0].user_id) { %>
+    <div
+        style="width: 100%; height: 45px; border-bottom: 1px solid #efefef; display: flex; flex-direction: row; justify-content: left; align-items: center; ">
+        <button style="width: 60px; height: 30px; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; margin-right: 10px;"
+            class="content_back" onclick="location.href='http://localhost:3000/board/content_update/<%=row[0].number%>'">수정</button>
+            <button style="width: 60px; height: 30px; font-size: 16px; font-family: 'Noto Sans KR', sans-serif;"
+            class="content_back" onclick="history.go(-1)">삭제</button>
+    </div>
+    <%}%>
+    <%}%>
+    <br>
+    <% if (sess.user != undefined) { %>
+    <form method="POST" action="/board/content/<%=row[0].number%>">
+        <div class="board_main_search" style="width: 100%;">
+            <span class='green_window' style="width: 900px;">
+                <input type='text' class='input_text' name="reply" style="width: 850px;" placeholder="댓글 입력..." />
+            </span>
+            <button class='sch_smit' style="width: 100px;">댓글 작성</button>
+        </div>
+    </form>
+    <%} else {%>
+    <div class="board_main_search" style="width: 100%;">
+        <span class='green_window' style="width: 100%;">
+            <input type='text' class='input_text' name="reply" style="width: 850px;"
+                placeholder="로그인 후 댓글 작성 가능합니다..." />
+        </span>
+    </div>
+    <%}%>
+    <br>
+    <% if (reply[0] != undefined) { %>
+        <% for (var i =0; i < reply.length; i++) {%>
+            <% if (reply[i].id == row[0].user_id) { %>
+    <div class="board_main_search" style="width: 100%; height: 80px;">
+        <span class='green_window' style="width: 100%; border: 1px solid; height: 70px; text-align: left;">
+            <div style="display: flex; flex-direction: row; justify-content: left; align-items: center; width: 100%; height: 30px; ">
+                <img src="../user/avatar.png" alt="" height="20px" width="auto" style="margin-left: 10px;"><span>익명 [작성자]</span>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: left; align-items: center; width: 100%; height: 40px; ">
+                <span style="margin-left: 10px;"><%= reply[i].content%></span>
+            </div>
+        </span>
+    </div>
+    <% } else { %>
+        <div class="board_main_search" style="width: 100%; height: 80px;">
+            <span class='green_window' style="width: 100%; border: 1px solid; height: 70px; text-align: left;">
+                <div style="display: flex; flex-direction: row; justify-content: left; align-items: center; width: 100%; height: 30px; ">
+                    <img src="../user/avatar.png" alt="" height="20px" width="auto" style="margin-left: 10px;"><span>익명</span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: left; align-items: center; width: 100%; height: 40px; ">
+                    <span style="margin-left: 10px;"><%= reply[i].content%></span>
+                </div>
+            </span>
+        </div>
+        <%}%>
+    <%}%>
+    <%}%>
+</div>

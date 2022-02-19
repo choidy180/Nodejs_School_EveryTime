@@ -1,0 +1,83 @@
+<div class="board_main_userinfo">
+    <div class="board_main_profile_img_box">
+        <div class="board_main_profile_img">
+            <% if(sess.user) {%>
+            <img src="http://localhost:3000/user/<%=sess.user.img%>" alt="" style="width: 160px; height: 160px;">
+            <% } else {%>
+            <img src="http://localhost:3000/user/not_login_profile_img.png%>" alt="" style="width: 100%; height: 100%;">
+            <%}%>
+        </div>
+    </div>
+    <div class="board_main_profile_text_box">
+        <% if(sess.user) {%>
+            <p
+                style="margin: 0px; margin-bottom: 5px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;">
+                <%=sess.user.school%></p>
+            <p style="margin: 0px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;">
+                <%=sess.user.name%></p>
+            <a href="http://localhost:3000/board_edit" class="edit_botton"><button style="margin-top: 10px;"
+                    class="board_create_button">게시글 작성</button></a>
+            <% } else {%>
+            <p style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-top: 0px;">로그인이
+                필요합니다</p>
+            <%}%>
+    </div>
+</div>
+<div class="main_board_list_box" >
+    <div class="main_board_list" style="margin-bottom: 20px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <% if(url == 'my') {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/my" style="color: red; font-size: 25px;">기본 정보</a>
+            </div>
+        <% } else {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/my">기본 정보</a>
+            </div>
+        <%}%>
+    </div>
+    <div class="main_board_list" style="margin-bottom: 20px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <% if(url == 'info') {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/info" style="color: red; font-size: 25px;">개인정보 변경</a>
+            </div>
+        <% } else {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/info">개인정보 변경</a>
+            </div>
+        <%}%>
+    </div>
+    <div class="main_board_list" style="margin-bottom: 20px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <% if(url == 'pw') {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/pw" style="color: red; font-size: 25px;">비밀번호 변경</a>
+            </div>
+        <% } else {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/pw">비밀번호 변경</a>
+            </div>
+        <%}%>
+    </div>
+    <div class="main_board_list" style="margin-bottom: 20px;">
+        <div class="main_board_list_img">
+            <img src="http://localhost:3000/user/list.png" style="width: 100%; height: 100%;">
+        </div>
+        <% if(url == 'img') {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/img" style="color: red; font-size: 25px;">이미지 변경</a>
+            </div>
+        <% } else {%>
+            <div class="main_board_list_text">
+                <a href="http://localhost:3000/board/mypage/img">이미지 변경</a>
+            </div>
+        <%}%>
+    </div>
+</div>

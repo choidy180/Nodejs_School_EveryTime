@@ -1,0 +1,55 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap"
+    rel="stylesheet">
+<div class="board_main_right" style="border: 1px solid black; padding: 20px; width: 950px; border-radius: 3px;">
+    <div style="width: 100%; height: 50px; border-bottom: 1px solid #efefef; text-align: left;">
+        <span style="font-size: 30px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px;">기본 정보</span>
+    </div>
+    <div style="width: 100%; height: 160px; border-bottom: 1px solid #efefef; text-align: left; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div style="width: 15%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;text-align: right;">
+            <span style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px;">사진</span>
+        </div>
+        <div style="width: 85%; height: 100%; padding: 10px;">
+            <img src="http://localhost:3000/user/<%=sess.user.img%>" alt="" style="width: 140px; height: 140px; margin-top: 10px;">
+        </div>
+    </div>
+    <div style="width: 100%; height: 50px; border-bottom: 1px solid #efefef; text-align: left; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div style="width: 15%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;text-align: right;">
+            <span style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px;">아이디</span>
+        </div>
+        <div style="width: 85%; height: 100%; padding: 10px; padding-top: 20px;">
+            <span style="font-size: 25px; font-family: 'Poor Story', cursive; font-weight: 300; margin: 5px;"><%=sess.user.id%></span>
+        </div>
+    </div>
+    <div style="width: 100%; height: 50px; border-bottom: 1px solid #efefef; text-align: left; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div style="width: 15%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;text-align: right;">
+            <span style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px;">성별</span>
+        </div>
+        <div style="width: 85%; height: 100%; padding: 10px; padding-top: 20px;">
+            <span style="font-size: 25px; font-family: 'Poor Story', cursive; font-weight: 300; margin: 5px;"><%=sess.user.sex%></span>
+        </div>
+    </div>
+    <div style="width: 100%; height: 50px; border-bottom: 1px solid #efefef; text-align: left; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div style="width: 15%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;text-align: right;">
+            <span style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px;">이름</span>
+        </div>
+        <div style="width: 85%; height: 100%; padding: 10px; padding-top: 20px;">
+            <span style="font-size: 25px; font-family: 'Poor Story', cursive; font-weight: 300; margin: 5px;"><%=sess.user.name%></span>
+        </div>
+    </div>
+    <div style="width: 100%; height: 50px; border-bottom: 1px solid #efefef; text-align: left; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div style="width: 15%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;text-align: right;">
+            <span style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px;">이메일</span>
+        </div>
+        <div style="width: 85%; height: 100%; padding: 10px; padding-top: 20px;">
+            <span style="font-size: 25px; font-family: 'Poor Story', cursive; font-weight: 300; margin: 5px;"><%=sess.user.email%></span>
+        </div>
+    </div>
+    <div style="width: 100%; height: 50px; border-bottom: 1px solid #efefef; text-align: left; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div style="width: 15%; height: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;text-align: right;">
+            <span style="font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700; margin-left: 10px;">학교</span>
+        </div>
+        <div style="width: 85%; height: 100%; padding: 10px; padding-top: 20px;">
+            <span style="font-size: 25px; font-family: 'Poor Story', cursive; font-weight: 300; margin: 5px;"><%=sess.user.school%></span>
+        </div>
+    </div>
+</div>

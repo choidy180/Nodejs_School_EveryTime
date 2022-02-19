@@ -1,0 +1,574 @@
+html{
+padding: 0px;
+margin: 0px;
+}
+head{
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+a{text-decoration: none;}
+a:visited{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+/* 게시판 헤드 */
+.head_area{
+  width: 100%;
+  height: 80px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+/* 네브 바 */
+.nav_area{
+  width: 1200px;
+  height: 75px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.nav_left_box{
+  width: 150px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.nav_center_box{
+  width: 650px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+  margin-left: 205px;
+  margin-right: 145px;
+}
+.nav_center_right{
+  width: 200px;
+  height: 100%;
+  margin-right: 0px;
+  text-align: right;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.nav_line{
+  width: 100%;
+  height: 10px;
+  background-color: #EFF2F8;
+}
+
+/* 바디 */
+.body_area{
+  width: 100%;
+  height: auto;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+
+.body_box{
+  width: 1200px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center;
+}
+
+.board_main_left{
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  margin-right: 10px;
+  border-bottom: transparent;
+  margin-bottom: 30px;
+}
+.board_main_right{
+  width: 990px;
+  height: 100%;
+  text-align: center;
+}
+.board_main_userinfo{
+  width: 100%;
+  height: 300px;
+  padding: 0px;
+  border: 1px solid #585858;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.board_main_top{
+  width: 100%;
+  height: 330px;
+  display: flex; flex-direction: row; justify-content: center;
+}
+.board_main_best{
+  width: 690px;
+  height: 100%;
+  margin-right: 10px;
+}
+.board_main_best_hbox{
+  width: 100%;
+  height: 156px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.wmargin{
+  width: 100%;
+  height: 10px;
+}
+.board_main_best_wbox{
+  width: 337px;
+  height: 100%;
+  border: 1px solid #585858;
+}
+.hmargin{
+  width: 10px;
+  height: 100%;
+}
+.board_main_hot{
+  width: 300px;
+  height: 100%;
+}
+.main_public{
+  width: 100%;
+  height: 50px;
+  display: flex; flex-direction: row; justify-content: left; align-items: center;
+}
+.main_title{
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #585858;
+  display: flex; flex-direction: row; justify-content: left; align-items: center;
+}
+.main_idol{
+  width: 100%;
+  height: 230px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.main_idol_box{
+  width: 25%;
+  height: 100%;
+}
+.main_idol_box_img{
+  width: 100%;
+  height: 65%;
+  border: 1px solid red;
+}
+.main_idol_box_img_area{
+  width: 100%;
+  height: 65%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.main_idol_img{
+  width: 225px;
+  height: 130px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.main_idol_img_class{
+  width: auto;
+  height: 130px;
+  overflow: hidden;
+}
+.main_idol_box_text_area{
+  width: 100%;
+  height: 35%;
+}
+.main_fasion{
+  width: 100%;
+  height: 230px;
+  border: 1px solid #585858;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.main_pet{
+  width: 100%;
+  height: 230px;
+  border: 1px solid #585858;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.main_secondhand{
+  width: 100%;
+  height: 230px;
+  border: 1px solid #585858;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.board_main_search{
+  width: 100%;
+  height: 40px;
+  text-overflow:ellipsis ;
+  overflow: hidden;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.green_window {
+	display: inline-block;
+	width: 230px; height: 34px;
+	border: 3px solid #585858;
+	background: white;
+}
+.input_text {
+	width: 210px; height: 21px;
+	margin: 6px 0 0 9px;
+	border: 0;
+	line-height: 21px;
+	font-weight: bold;
+	font-size: 16px;
+	outline: none;
+}
+.sch_smit {
+	width: 50px; height: 40px;
+	margin: 0; border: 0;
+	vertical-align: top;
+	background: #585858;
+	color: white;
+	font-weight: bold;
+	border-radius: 1px;
+	cursor: pointer;
+}
+.sch_smit:hover {
+	background: #585858;
+}
+.board_main_hot_list{
+  width: 100%;
+  height: 270px;
+  border: 1px solid #585858;
+  text-align: left;
+  font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.board_main_hot_list_list{
+  width: 280px;
+  height: 30px;
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 3px;
+  font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;
+}
+.board_main_profile_img_box{
+  margin: 0px;
+  height: 65%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.board_main_profile_img{
+  width: 80%;
+  height: 80%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.board_main_profile_text_box{
+  padding: 10px;
+  text-align: center;
+  padding-top: 0px;
+}
+.board_main_profile_text{
+  margin: 0px;
+}
+.board_create_button{
+    background:#585858;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:30px;
+    font-size:14px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:500ms ease all;
+    outline:none;
+    border-radius: 5px;
+    font-family: 'Poor Story', cursive; font-weight: 700;
+}
+.board_create_button:hover{
+  background:#fff;
+  color:#585858;
+}
+.board_create_button::before, .board_create_button::after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #585858;
+  transition:400ms ease all;
+}
+.board_create_button::after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.board_create_button:hover::before, .board_create_button:hover::after{
+  width:100%;
+  transition:800ms ease all;
+}
+.create_post{
+  width: 100%;
+  font-size: 10px;
+  font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;
+  margin-bottom: 10px;
+}
+/* 메인 본인 관련 정보 버튼 */
+.board_search_button{
+  background:#fff;
+  color:#585858;
+  border:1px solid #585858;
+  border-bottom: none;
+  position:relative;
+  height:30px;
+  font-size:14px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:500ms ease all;
+  outline:none;
+  font-family: 'Poor Story', cursive; font-weight: 700;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.board_search_button:hover{
+background:#585858;
+color:#fff;
+}
+.board_search_button::before, .board_search_button::after{
+content:'';
+position:absolute;
+top:0;
+right:0;
+height:2px;
+width:0;
+background: black;
+transition:400ms ease all;
+}
+.board_search_button::after{
+right:inherit;
+top:inherit;
+left:0;
+bottom:0;
+}
+.board_search_button:hover::before, .board_search_button:hover::after{
+  width:100%;
+  transition:800ms ease all;
+}
+/* 메인 게시판 리스트 (왼쪽) */
+.main_board_list_box{
+  border: 1px solid #585858;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+.main_board_list_img{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.main_board_list{
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  font-size: 18px; font-family: 'Poor Story', cursive; font-weight: 700;
+  display: flex; flex-direction: row; justify-content: left; align-items: center;
+}
+/* 회원가입 */
+.join_area{
+  width: 500px;
+  height: auto;
+}
+.join_title{
+  width: 515px;
+  height: auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.join_title_text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.join_input_area{
+  width: 515px
+}
+.join_input_box{
+  width: 503px;
+  height: 40px;
+  font-size: 14px;
+  color: black;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  border: 1px solid gray;
+}
+input::placeholder{
+  color: black;
+}
+.join_button{
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  width: 514px;
+  height: 65px;
+  border: 1px solid #585858;
+  background-color: #585858;
+  color: white;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: all 0.4s;
+}
+.join_button:hover{
+  color: #585858;
+  background-color: white;
+  border: 1px solid #585858;
+  width: 514px;
+}
+.join_input_birth_area{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center;
+}
+.join_input_birth{
+  width: 152px;
+  height: 40px;
+  font-size: 14px;
+  color: black;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  border: 1px solid gray;
+  margin-right: 11px;
+}
+.join_input_birth_end{
+  width: 152px;
+  height: 40px;
+  font-size: 14px;
+  color: black;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  border: 1px solid gray;
+}
+/* 게시글 작성 */
+.edit_area{
+  width: 100%;
+  height: auto;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.edit_box{
+  height: auto;
+  padding-top: 50px;
+  text-align: left;
+}
+.edit_title_text{
+  margin-left: 20px;
+  font-size: 18px; font-family: 'Poor Story', cursive; font-weight: 700;
+}
+.edit_line{
+  width: 700px;
+  height: 5px;
+  background-color: #EFF2F8;
+  margin-bottom: 10px;
+}
+.edit_select_box{
+  width: 100%;
+  height: 35px;
+  margin-bottom: 10px;
+}
+.edit_select{
+  margin-left: 20px;
+  width: 200px;
+  height: 35px;
+}
+.input_board_title_box{
+  margin-left: 20px;
+  width: 670px;
+  height: 30px;
+  border: 1px solid #585858;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.input_board_title_box::placeholder{
+  color: black;
+  font-size: 18px; font-family: 'Poor Story', cursive; font-weight: 700;
+}
+.input_board_img_box{
+  margin-left: 20px;
+  width: 670px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.input_board_content{
+  width: 660px;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #585858;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.upload_board_box{
+  margin-left: 20px;
+  width: 680px;
+  height: 30px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+/* 게시판 조회 */
+.board_list_title{
+  font-size: 24px; font-family: 'Poor Story', cursive; font-weight: 700;
+}
+.board_list_sub{
+  font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 500;
+}
+.board_list_area{
+  width: 965px;
+  height: auto;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #585858;
+  border-bottom: 1px solid #e4e4e4;
+}
+.board_classification{
+  width: 100%;
+  height: 40px;
+  border-bottom: 0.5px solid #e4e4e4;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.board_classification_sort{
+  width: 140px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.board_classification_title{
+  width: 380px;
+  height: 100%;
+  padding-left: 10px;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.board_classification_name{
+  width: 130px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.board_classification_date{
+  width: 115px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.board_classification_agree{
+  width: 00px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.board_classification_hit{
+  width: 70px;
+  height: 100%;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; 
+}
+.board_classification_text{
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
+.board_classification_title_text{
+  width: 360px;
+  height: 100%;
+  padding-left: 30px;
+  display: flex; flex-direction: row; justify-content: left; align-items: center; 
+}
+
+/* 페이지 상세보기 */
+.content_back{
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  border-radius: 3px;
+}
+
+

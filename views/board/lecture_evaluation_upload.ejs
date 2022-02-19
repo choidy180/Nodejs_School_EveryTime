@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap"
+    rel="stylesheet">
+<div class="board_main_right" style="border: 1px solid #585858; text-align: left;">
+    <div class="edit_box">
+        <div class="edit_title_text" style="font-size: 30px;">강의 평가</div>
+        <div class="edit_line"></div>
+        <div class="edit_title_text" style="color: #f00; margin-bottom: 10px;">* 강의평가 시 유의사항 : 악의적, 허위사실, 어그로 성 강의평가 금지
+        </div>
+        <form method="POST" action="/board/lecture_evaluation_upload" enctype="multipart/form-data" style="margin-bottom: 20px;">
+            <input type="text" class="input_board_title_box" name="lecture" placeholder="강의명을 입력해 주세요">
+            <input type="text" class="input_board_title_box" name="professor" placeholder="교수명을 입력해 주세요">
+            <input type="text" class="input_board_title_box" name="score" placeholder="최소-0 / 최대 10">
+            <p style="margin-top: 0px; margin-bottom: 10px; padding-left: 25px; font-size: 20px; font-family: 'Poor Story', cursive; font-weight: 700;"> <강의평가를 작성해 주세요></p>
+            <textarea name="opinion" class="input_board_content" cols="30" rows="10"></textarea>
+            <br>
+            <div class="upload_board_box">
+                <button class="board_create_button" style="font-size: 20px;">강의평가 작성</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

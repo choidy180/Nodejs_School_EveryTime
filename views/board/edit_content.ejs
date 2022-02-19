@@ -1,0 +1,59 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap"
+    rel="stylesheet">
+<% if (row[0] != undefined) {%>
+<div class="board_main_right" style="border: 1px solid #585858; text-align: left;">
+    <p class="board_list_title"
+        style="margin-bottom: 15px; margin-top: 20px; margin-left: 15px; font-family: 'Noto Sans KR', sans-serif;">
+        <%=row[0].name%></p>
+    <p class="board_list_sub"
+        style="margin-top: 0px;margin-left: 15px; margin-bottom: 10px; font-family: 'Noto Sans KR', sans-serif;">
+        <%=row[0].explanation%></p>
+    <div class="board_list_area">
+        <div class="board_classification">
+            <div class="board_classification_sort">
+            </div>
+            <div class="board_classification_title">
+                <span class="board_classification_text" style="font-size: 20px; font-weight: 700;">제목</span>
+            </div>
+            <div class="board_classification_name">
+                <span class="board_classification_text" style="font-size: 20px; font-weight: 700;">작성자</span>
+            </div>
+            <div class="board_classification_date">
+                <span class="board_classification_text" style="font-size: 20px; font-weight: 700;">작성일</span>
+            </div>
+            <div class="board_classification_agree">
+                <span class="board_classification_text" style="font-size: 20px; font-weight: 700;"></span>
+            </div>
+            <div class="board_classification_hit">
+                <span class="board_classification_text" style="font-size: 20px; font-weight: 700;">조회수</span>
+            </div>
+        </div>
+            <%  for(var i=0; i<row2.length; i++){%>
+                <div class="board_classification">
+                    <div class="board_classification_sort">
+                        <span class="board_classification_text" style="font-size: 16px; font-family: 'Noto Sans KR', sans-serif;"><%=row2[i].sort%></span>
+                </div>
+                <div class="board_classification_title_text">
+                    <a href="http://localhost:3000/content/<%=row2[i].number%>"><span class="board_classification_text" style="font-family: 'Noto Sans KR', sans-serif;"><%=row2[i].title%></span></a>
+                </div>
+                <div class="board_classification_name">
+                    <span class="board_classification_text"><%=row2[i].user_name%></span>
+                </div>
+                <div class="board_classification_date">
+                    <span class="board_classification_text">작성일</span>
+                </div>
+                <div class="board_classification_agree">
+                    <span class="board_classification_text"><%=row2[i].agree%></span>
+                </div>
+                <div class="board_classification_hit">
+                    <span class="board_classification_text"><%=row2[i].hit%></span>
+                </div>
+            </div>
+            <%}%>
+    </div>
+</div>
+<%} else {%>
+    <div class="board_main_right" style="border: 1px solid #585858; text-align: left; height: 900px; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <span style="font-size: 24px; font-family: 'Poor Story', cursive; font-weight: 700;">작성한 게시글이 존재하지 않습니다!!</span>
+    </div>
+<%}%>

@@ -1,0 +1,24 @@
+<link href="https://fonts.googleapis.com/css2?family=Bellota&family=Poor+Story&family=Single+Day&display=swap"
+    rel="stylesheet">
+<div class="board_main_right" style="border: 1px solid black; padding: 20px; width: 950px; border-radius: 3px;">
+    <div style="width: 100%; height: 45px; border-bottom: 1px solid #efefef; display: flex; flex-direction: row; justify-content: left; align-items: center; ">
+        <button style="width: 60px; height: 30px; font-size: 16px; font-family: 'Noto Sans KR', sans-serif;" class="content_back" onclick="history.go(-1)">목록</button>
+    </div>
+    <div style="width: 100%; height: 25px;">
+        <span style="font-size: 16px; font-family: 'Noto Sans KR', sans-serif; display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 10px;"><%=row[0].product%></span>
+    </div>
+    <div style="width: 100%; height: 27px;">
+        <span style="font-size: 20px; font-family: 'Noto Sans KR', sans-serif; display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 5px;"><%=row[0].product%></span>
+    </div>
+    <div style="width: 100%; height: 30px; display: flex; flex-direction: row; justify-content: left; align-items: center; margin-top: 5px; margin-bottom: 30px; ">
+        <img src="http://localhost:3000/user/<%=row2[0].img%>" alt="" style="width: 30px; height: 100%;"><span>&nbsp;&nbsp;<%=row[0].name%>&nbsp;/&nbsp;</span><span> <%=row[0].date%></span>
+    </div>
+    <div style="width: auto; height: auto; margin-bottom: 30px; overflow: hidden;">
+        <% if(row[0].img != null) {%>
+        <img src="http://localhost:3000/user/<%=row[0].img%>" alt="" style="width: 100%; height: auto;">
+        <%}%>
+    </div>
+    <div style="width: 100%; height: auto; margin-bottom: 30px; display: flex; flex-direction: row; justify-content: left; align-items: center;">
+        <span><%=row[0].content%></span>
+    </div>
+</div>
